@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">John Doe - QA Engineer</h1>
+    
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('about')">About Me</button>
+      <button class="tab-button" onclick="showTab('projects')">Projects</button>
+      <button class="tab-button" onclick="showTab('contact')">Contact</button>
+    </div>
+    
+    <div id="about" class="tab-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisl quis nisi scelerisque gravida.</p>
+    </div>
+
+    <div id="projects" class="tab-content" style="display: none;">
+      <div class="project-card">
+        <div class="project-header">
+          <h3>127 ZBI</h3>
+        </div>
+        <div class="project-content">
+          <p>Сайт для 127 окремої бригади ТРО міста Харкова</p>
+          <a href="https://127-zbir.vercel.app/" target="_blank">Visit Project</a>
+          <a href="https://github.com/baza-trainee/127-zbi" target="_blank">GitHub</a>
+        </div>
+      </div>
+      
+      <!-- Add more projects in similar structure -->
+      
+    </div>
+
+    <div id="contact" class="tab-content" style="display: none;">
+      <p>Email: john.doe@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
