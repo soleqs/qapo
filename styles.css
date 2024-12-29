@@ -1,66 +1,200 @@
+/* Variables */
+:root {
+  --primary: rgb(134, 108, 90);
+  --primary-light: rgb(164, 138, 120);
+  --primary-dark: rgb(104, 78, 60);
+  --primary-transparent: rgba(134, 108, 90, 0.1);
+  --text-on-primary: rgb(255, 255, 255);
+  --background: rgb(245, 242, 240);
+  --card-background: rgb(255, 255, 255);
+}
+
+/* Base styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  background: linear-gradient(135deg, var(--background), rgb(234, 228, 223));
+  color: rgb(51, 41, 34);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
 }
 
+/* Container */
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
+/* Title */
 .title {
+  font-size: 2.8rem;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
+/* Tabs */
 .tabs {
-  text-align: center;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(134, 108, 90, 0.1);
 }
 
 .tab-button {
-  background-color: #007BFF;
-  color: white;
+  padding: 0.8rem 1.8rem;
   border: none;
-  padding: 10px 20px;
+  border-radius: 12px;
+  background: var(--card-background);
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
 .tab-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, var(--primary-transparent), rgba(134, 108, 90, 0.05));
+  transform: translateY(-2px);
 }
 
+.tab-button.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--text-on-primary);
+}
+
+/* Content sections */
 .tab-content {
-  display: none;
+  background: var(--card-background);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(134, 108, 90, 0.1);
+  margin-bottom: 2rem;
 }
 
+/* Project cards */
 .project-card {
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  background: var(--card-background);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(134, 108, 90, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(134, 108, 90, 0.15);
 }
 
 .project-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--primary-transparent), rgba(134, 108, 90, 0.05));
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(134, 108, 90, 0.1);
 }
 
+.project-header h3 {
+  margin: 0;
+  color: var(--primary-dark);
+  font-size: 1.4rem;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content p {
+  color: rgb(81, 71, 64);
+  margin-bottom: 1.2rem;
+}
+
+/* Links */
 .project-content a {
   display: inline-block;
-  margin-right: 10px;
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
-  color: #007BFF;
+  color: var(--primary);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary-transparent), rgba(134, 108, 90, 0.05));
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .project-content a:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--text-on-primary);
+  transform: translateY(-2px);
+}
+
+/* Contact section */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  color: rgb(81, 71, 64);
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    width: 100%;
+  }
+
+  .project-content a {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-out;
+}
+Last edited 2 хвилини тому
