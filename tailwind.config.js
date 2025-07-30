@@ -2,7 +2,7 @@ module.exports = {
   corePlugins: {
     preflight: false, // Отключает базовые стили для совместимости
   },
-  content: ['./*.html', './src/**/*.{html,js}'],
+  content: ['./index.html', './src/**/*.{html,js}'],
   theme: {
     extend: {
       keyframes: {
