@@ -8,96 +8,82 @@
     <link rel="stylesheet" href="styles/output.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">QA Engineer Portfolio</h1>
-        
-        <div class="tabs">
-            <button class="tab-button active" onclick="showTab('about')">About Me</button>
-            <button class="tab-button" onclick="showTab('projects')">Projects</button>
-            <button class="tab-button" onclick="showTab('contact')">Contact</button>
-        </div>
-        
-        <div id="about" class="tab-content">
-            <p>Experienced QA Engineer with a focus on automated testing and quality assurance processes. Specialized in web application testing and test documentation.</p>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex flex-col items-center justify-center animate-fade-in">
+        <h1 class="text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent animate-glow mb-8 mt-8">QA Engineer Portfolio</h1>
+
+        <div class="tabs flex gap-4 mb-8 animate-slide-up">
+            <button class="tab-button active transition-colors duration-300 hover:bg-blue-100 hover:text-blue-700" onclick="showTab('about')">About Me</button>
+            <button class="tab-button transition-colors duration-300 hover:bg-blue-100 hover:text-blue-700" onclick="showTab('projects')">Projects</button>
+            <button class="tab-button transition-colors duration-300 hover:bg-blue-100 hover:text-blue-700" onclick="showTab('contact')">Contact</button>
         </div>
 
-        <div id="projects" class="tab-content" style="display: none;">
+        <div id="about" class="tab-content animate-fade-in">
+            <p class="text-xl text-slate-300 animate-slide-up">Experienced QA Engineer with a focus on automated testing and quality assurance processes. Specialized in web application testing and test documentation.</p>
+        </div>
+
+        <div id="projects" class="tab-content animate-fade-in" style="display: none;">
             <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>127 ZBIR</h3>
-                </div>
-                <div class="project-content">
-                    <p>Сайт для 127 окремої бригади ТРО міста Харкова. Проведено повне тестування функціоналу.</p>
-                    <div class="project-links">
-                        <a href="https://127-zbir.vercel.app/" target="_blank">Visit Project</a>
-                        <a href="https://github.com/baza-trainee/127-zbi" target="_blank">GitHub</a>
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 mb-6">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">127 ZBIR</h3>
+                    <p class="text-slate-600 mb-4">Сайт для 127 окремої бригади ТРО міста Харкова. Проведено повне тестування функціоналу.</p>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        <a href="https://127-zbir.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800">Visit Project</a>
+                        <a href="https://github.com/baza-trainee/127-zbi" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub</a>
                     </div>
                 </div>
             </div>
-            
             <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Donation Baza</h3>
-                </div>
-                <div class="project-content">
-                    <p>Платформа для сбора пожертвований. Выполнено тестирование платежной системы и пользовательских сценариев.</p>
-                    <div class="project-links">
-                        <a href="https://donation-baza.vercel.app/ua" target="_blank">Visit Project</a>
-                        <a href="https://github.com/baza-trainee/donation-baza" target="_blank">GitHub</a>
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 mb-6">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">Donation Baza</h3>
+                    <p class="text-slate-600 mb-4">Платформа для сбора пожертвований. Выполнено тестирование платежной системы и пользовательских сценариев.</p>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        <a href="https://donation-baza.vercel.app/ua" target="_blank" class="text-blue-600 hover:text-blue-800">Visit Project</a>
+                        <a href="https://github.com/baza-trainee/donation-baza" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub</a>
                     </div>
                 </div>
             </div>
-            
             <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Baza CRM</h3>
-                </div>
-                <div class="project-content">
-                    <p>CRM система для управления проектами. Проведено комплексное тестирование функционала и API.</p>
-                    <div class="project-links">
-                        <a href="https://baza-crm-frontend.vercel.app/" target="_blank">Visit Project</a>
-                        <a href="https://github.com/baza-trainee/baza-crm-frontend" target="_blank">GitHub Frontend</a>
-                        <a href="https://github.com/baza-trainee/baza-crm-backend" target="_blank">GitHub Backend</a>
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 mb-6">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">Baza CRM</h3>
+                    <p class="text-slate-600 mb-4">CRM система для управления проектами. Проведено комплексное тестирование функционала и API.</p>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        <a href="https://baza-crm-frontend.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800">Visit Project</a>
+                        <a href="https://github.com/baza-trainee/baza-crm-frontend" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub Frontend</a>
+                        <a href="https://github.com/baza-trainee/baza-crm-backend" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub Backend</a>
                     </div>
                 </div>
             </div>
-            
             <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Peaceful Warrior Foundation</h3>
-                </div>
-                <div class="project-content">
-                    <p>Веб-сайт для фонда Peaceful Warrior Foundation. Выполнено тестирование адаптивности и кросс-браузерное тестирование.</p>
-                    <div class="project-links">
-                        <a href="https://peaceful-warrior-foundation.vercel.app/" target="_blank">Visit Project</a>
-                        <a href="https://github.com/baza-trainee/peaceful-warrior-foundation" target="_blank">GitHub</a>
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 mb-6">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">Peaceful Warrior Foundation</h3>
+                    <p class="text-slate-600 mb-4">Веб-сайт для фонда Peaceful Warrior Foundation. Выполнено тестирование адаптивности и кросс-браузерное тестирование.</p>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        <a href="https://peaceful-warrior-foundation.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800">Visit Project</a>
+                        <a href="https://github.com/baza-trainee/peaceful-warrior-foundation" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub</a>
                     </div>
                 </div>
             </div>
-            
             <!-- Project 5 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Baza Skill</h3>
-                </div>
-                <div class="project-content">
-                    <p>Веб-сайт для trainee. Проведено тестирование регистрации, авторизации и основного функционала.</p>
-                    <div class="project-links">
-                        <a href="https://bazaskill-frontend.vercel.app/" target="_blank">Visit Project</a>
-                        <a href="https://github.com/baza-trainee/bazaskill-frontend" target="_blank">GitHub</a>
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 mb-6">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">Baza Skill</h3>
+                    <p class="text-slate-600 mb-4">Веб-сайт для trainee. Проведено тестирование регистрации, авторизации и основного функционала.</p>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        <a href="https://bazaskill-frontend.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800">Visit Project</a>
+                        <a href="https://github.com/baza-trainee/bazaskill-frontend" target="_blank" class="text-slate-500 hover:text-slate-700">GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="contact" class="tab-content" style="display: none;">
-            <p>Email: soleqs@gmail.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/froginfog" target="_blank">linkedin.com/in/froginfog</a></p>
-            <p>GitHub: <a href="https://github.com/froginfog" target="_blank">github.com/froginfog</a></p>
+        <div id="contact" class="tab-content animate-fade-in" style="display: none;">
+            <p class="text-xl text-slate-300 animate-slide-up">Email: soleqs@gmail.com</p>
+            <p class="text-xl text-slate-300 animate-slide-up">LinkedIn: <a href="https://linkedin.com/in/froginfog" target="_blank" class="text-blue-400 hover:text-blue-600 transition-colors duration-300">linkedin.com/in/froginfog</a></p>
+            <p class="text-xl text-slate-300 animate-slide-up">GitHub: <a href="https://github.com/froginfog" target="_blank" class="text-blue-400 hover:text-blue-600 transition-colors duration-300">github.com/froginfog</a></p>
         </div>
     </div>
 
