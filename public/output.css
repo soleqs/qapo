@@ -1,6 +1,15 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @layer properties;
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.top-full {
+  top: 100%;
+}
 .block {
   display: block;
 }
@@ -9,6 +18,9 @@
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .min-h-screen {
   min-height: 100vh;
