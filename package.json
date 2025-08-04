@@ -4,6 +4,7 @@
   "description": "A QA Engineer portfolio.",
   "main": "index.html",
   "scripts": {
+    "postinstall": "chmod +x ./node_modules/.bin/tailwindcss",
     "build": "tailwindcss -i ./src/input.css -o ./public/output.css",
     "dev": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
   },
