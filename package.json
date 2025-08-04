@@ -1,28 +1,16 @@
 {
-  "name": "qapo",
+  "name": "qapo-portfolio",
   "version": "1.0.0",
-  "main": "postcss.config.js",
-  "dependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11",
-    "postcss-cli": "^11.0.0",
-    "@tailwindcss/postcss": "latest"
-  },
+  "description": "A QA Engineer portfolio.",
+  "main": "index.html",
   "scripts": {
-    "build": "mkdir -p public && postcss ./styles/tailwind.css -o ./public/output.css && cp index.html public/ && cp script.js public/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tailwindcss -i ./src/input.css -o ./public/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/soleqs/qapo.git"
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
   },
-  "keywords": [],
+  "keywords": ["portfolio", "qa", "tailwind"],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/soleqs/qapo/issues"
-  },
-  "homepage": "https://github.com/soleqs/qapo#readme",
-  "description": ""
+  "license": "ISC"
 }
