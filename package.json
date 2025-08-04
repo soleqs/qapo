@@ -10,7 +10,7 @@
     "@tailwindcss/postcss": "latest"
   },
   "scripts": {
-    "build": "mkdir -p public/styles && postcss ./styles/tailwind.css -o ./public/styles/output.css && cp index.html public/ && cp script.js public/",
+    "build": "mkdir -p public && postcss ./styles/tailwind.css -o ./public/output.css && cp index.html public/ && cp script.js public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
