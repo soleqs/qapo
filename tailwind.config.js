@@ -1,10 +1,20 @@
 module.exports = {
   corePlugins: {
-    preflight: false, // Отключает базовые стили для совместимости
+    preflight: true,
   },
   content: ['./index.html', './src/**/*.{html,js}'],
   theme: {
     extend: {
+      colors: {
+        'brand-purple': '#7f5af0',
+        'brand-dark': '#16161a',
+        'brand-light': '#fffffe',
+        'brand-gray': '#94a1b2',
+      },
+      boxShadow: {
+        'volumetric': '0 5px 0 0 #a78bfa, 0 8px 20px 0 rgba(0,0,0,0.3)',
+        'volumetric-active': '0 2px 0 0 #a78bfa, 0 4px 10px 0 rgba(0,0,0,0.3)',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
