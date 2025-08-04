@@ -8,7 +8,7 @@
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./styles/tailwind.css -o ./styles/output.css",
+    "build": "./node_modules/.bin/tailwindcss -i ./styles/tailwind.css -o ./styles/output.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
